@@ -1,15 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.json({
-    weatherData: {
-      location: 'London, ON',
-      temperature: 10,
-      weatherDescription: 'raining'
-    }
-  });
+router.get('/:location?', function (req, res, next) {
+  res.json(getStubWeatherData(req.params.location));
 });
+
+function getStubWeatherData(location) {
+  var currentSeconds = new Date().getSeconds();
+  return {
+    weather: {
+      location: location || 'londonon',
+      temperature: `${currentSeconds / 2}\u2103`,
+      weatherDescription: currentSeconds % 2 == 0 ? 'partly cloudy' : 'sunny'
+    }
+  };
+}
 
 module.exports = router;
