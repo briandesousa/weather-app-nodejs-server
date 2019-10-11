@@ -9,7 +9,7 @@ This repository contains a NodeJS Express server that hosts:
 
 This server hosts the Weather App static bundle from the `public-flutter` folder.
 
-The Weather App is built with Flutter Web. The source code for this app can be found here: [https://github.com/briandesousa/weather-app-flutter](https://github.com/briandesousa/weather-app-flutter)). 
+The Weather App is built with Flutter Web. The source code for this app can be found here: [https://github.com/briandesousa/weather-app-flutter](https://github.com/briandesousa/weather-app-flutter)).
 
 The Flutter CLI is used to compile the Weather app into a static bundle that can be copied to the `public-flutter` folder.
 
